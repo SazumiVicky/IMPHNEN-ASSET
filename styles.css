@@ -1,0 +1,257 @@
+:root {
+  --imphnen-purple: #EEDBFF;
+  --imphnen-neon: #D7FF00;
+  --imphnen-yellow: #F6FF8B;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background-color: var(--imphnen-purple);
+  position: relative;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.imphnen-sazumi-bg-grid {
+  background-image: 
+      linear-gradient(to right, rgba(0,0,0,0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(0,0,0,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.imphnen-sazumi-glass {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+}
+
+.imphnen-sazumi-badge {
+  background-color: var(--imphnen-yellow);
+  border: 2px solid #000;
+  border-radius: 9999px;
+  padding: 0.25rem 0.75rem;
+  font-weight: 700;
+  display: inline-block;
+  box-shadow: 4px 4px 0px rgba(0,0,0,0.2);
+}
+
+.imphnen-sazumi-card {
+  border: 3px solid #000;
+  border-radius: 12px;
+  box-shadow: 8px 8px 0px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.imphnen-sazumi-card:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 12px 12px 0px rgba(0,0,0,0.2);
+}
+
+.imphnen-sazumi-btn {
+  background-color: var(--imphnen-neon);
+  color: #000;
+  font-weight: 700;
+  border: 2px solid #000;
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  box-shadow: 4px 4px 0px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.imphnen-sazumi-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+}
+
+.imphnen-sazumi-nav {
+  transition: all 0.5s ease;
+}
+
+.imphnen-sazumi-nav.open {
+  transform: translateX(0);
+}
+
+.imphnen-sazumi-floating-badge {
+  position: fixed;
+  animation: float 6s ease-in-out infinite;
+  z-index: 20;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.imphnen-sazumi-joke-box {
+  border: 3px dashed #000;
+  border-radius: 12px;
+  padding: 1rem;
+  position: relative;
+}
+
+.imphnen-sazumi-joke-box::before {
+  content: "JOKE ✨";
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  background: var(--imphnen-yellow);
+  padding: 0 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.imphnen-sazumi-language-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  background: white;
+  border: 2px solid #000;
+  border-radius: 9999px;
+  margin: 0.25rem;
+}
+
+.imphnen-sazumi-shop-item {
+  transition: all 0.3s ease;
+}
+
+.imphnen-sazumi-shop-item:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .badge-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+  }
+  
+  .imphnen-sazumi-badge {
+      margin: 0.25rem;
+  }
+  
+  .hero-section {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+  }
+  
+  .hero-text {
+      font-size: 2.5rem;
+      line-height: 1.2;
+  }
+  
+  .categories-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+  }
+  
+  .testimonials-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+  }
+}
+
+.no-php-badge {
+  bottom: 120px !important;
+  right: 20px !important;
+}
+
+.footer-content {
+  padding-bottom: 4rem;
+}
+
+.hover-scale {
+  transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+  transform: scale(1.03);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--imphnen-purple);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0,0,0,0.3);
+}
+
+nav.scrolled {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#join::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), transparent);
+  z-index: 1;
+}
+#join::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  z-index: 1;
+}
+
+.section-grid-fade {
+  position: relative;
+  overflow: hidden;
+}
+.section-grid-fade::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 20%;
+  background: linear-gradient(to bottom, var(--imphnen-purple), transparent);
+  z-index: 1;
+}
+.section-grid-fade::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 20%;
+  background: linear-gradient(to top, var(--imphnen-purple), transparent);
+  z-index: 1;
+}
+.section-grid-fade > .grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: 
+      linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
+}
+.section-content {
+  position: relative;
+  z-index: 2;
+}
